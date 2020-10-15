@@ -18,6 +18,6 @@ export class PockemonService {
   }
 
   getPockemonType(id: number): Observable<any> {
-    return this.http.get(`http://pokeapi.co/api/v2/type/${id}/`);
+    return this.http.get(`https://pokeapi.co/api/v2/type/${id}/`);
   }
 }

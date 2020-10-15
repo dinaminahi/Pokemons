@@ -47,7 +47,7 @@ export class MainComponent implements OnInit, OnDestroy {
   }
 
   clickPockemon(url: string): void {
-    this.pockemonClickedUrl = url;
+    this.pockemonClickedUrl = url.slice(0, 3) + 's' + url.slice(3);
     this.ifClicked = true;
   }
 
