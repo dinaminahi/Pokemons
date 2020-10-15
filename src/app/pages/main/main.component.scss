@@ -1,0 +1,89 @@
+.title-wrapper {
+  display: flex;
+  justify-content: center;
+
+  &-title {
+    border: 1px solid black;
+    width: 400px;
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+.page-wrapper {
+  display: flex;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  &-pockemon {
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 0;
+    background-color: #fff;
+    color: black;
+    flex: 1 1 25%;
+    margin: 20px;
+
+    .name {
+      text-align: center;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+
+    &-types {
+      display: flex;
+
+      .type {
+        background-color: darkslategray;
+        color: #fff;
+        margin: 3px 5px;
+        padding: 7px 15px;
+        border-radius: 5px;
+
+        &::first-letter {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+.btn-wrapper {
+  width: 100%;
+  margin: 30px 20px;
+  button {
+    width: 100%;
+    background-color: #33bdef;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px 0;
+    outline: none;
+
+    &:hover {
+      background-color: #019ad2;
+    }
+    &:active {
+      position: relative;
+      top: 1px;
+    }
+  }
+}
+
+.details {
+  display: flex;
+  align-items: center;
+}
+
+.select {
+  color: black;
+}

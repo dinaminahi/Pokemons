@@ -1,0 +1,43 @@
+.card {
+  width: 350px;
+  background-color: #ffffff;
+  border-radius: 0;
+  border: 1px solid black;
+  color: black;
+  margin: 20px;
+  flex: 1 1 100%;
+
+  &-content {
+    width: 100%;
+    text-align: center;
+
+    .name::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &-characteristic {
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table,
+    td {
+      border: 1px solid black;
+      padding: 5px 0;
+    }
+
+    td::first-letter {
+      text-transform: uppercase;
+    }
+
+    .type {
+      padding: 0 3px;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+  }
+}

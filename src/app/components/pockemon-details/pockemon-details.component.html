@@ -1,0 +1,43 @@
+<mat-card class="card">
+  <img *ngIf="pockemon" mat-card-image src="https://pokeres.bastionbot.org/images/pokemon/{{pockemon?.id}}.png"
+    alt="Photo of {{pockemon?.name}}">
+  <mat-card-content class="card-content">
+    <h2 class="name">{{pockemon?.name}}</h2>
+    <div class="card-characteristic">
+      <table>
+        <tbody>
+          <tr>
+            <td>Type</td>
+            <td><span class="type" *ngFor="let type of pockemon?.types">{{type?.type?.name}}</span></td>
+          </tr>
+          <tr *ngFor="let stat of pockemon?.stats">
+            <td>{{stat?.stat?.name}}</td>
+            <td>{{stat?.base_stat}}</td>
+          </tr>
+          <tr>
+            <td>Weight</td>
+            <td>{{pockemon?.weight}}</td>
+          </tr>
+          <tr>
+            <td>Total moves</td>
+            <td>{{pockemon?.moves.length}}</td>
+          </tr>
+          <!--
+
+          <tr>
+            <td>Order</td>
+            <td>{{pockemon?.order}}</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
+  </mat-card-content>
+</mat-card>

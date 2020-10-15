@@ -1,0 +1,28 @@
+<div class="title-wrapper">
+  <h1 class="title-wrapper-title">Pokedex</h1>
+</div>
+
+<div class="page-wrapper">
+  <div class="cards">
+    <mat-card *ngFor="let pockemon of pockemons" class="cards-pockemon" (click)="clickPockemon(pockemon.url)">
+      <img *ngIf="pockemon?.id" mat-card-image src="https://pokeres.bastionbot.org/images/pokemon/{{pockemon?.id}}.png"
+        alt="Photo of {{pockemon.name}}">
+      <mat-card-content>
+        <h2 class="name">{{pockemon.name}}</h2>
+        <div class="cards-pockemon-types">
+          <span class="type" *ngFor="let type of pockemon.types">{{type.type.name}}</span>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    <br>
+    <div class="btn-wrapper">
+      <button (click)="loadMoreData()">
+        Load More
+      </button>
+    </div>
+  </div>
+  <div class="details" [style.visibility]="ifClicked ? 'visible' : 'hidden'">
+    <app-pockemon-details [url]="pockemonClickedUrl">
+    </app-pockemon-details>
+  </div>
+</div>
