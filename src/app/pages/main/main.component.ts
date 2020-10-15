@@ -47,11 +47,11 @@ export class MainComponent implements OnInit, OnDestroy {
   }
 
   clickPockemon(url: string): void {
-    this.pockemonClickedUrl = url.slice(0, 4) + 's' + url.slice(4);
+    this.pockemonClickedUrl = url.slice(0, 4) + 's' + url.slice(5);
     this.ifClicked = true;
   }
 
   loadMoreData(): void {
-    this.getPockemons(this.nextPockemons);
+    this.getPockemons(this.nextPockemons.slice(0, 4) + 's' + this.nextPockemons.slice(5));
   }
 }
