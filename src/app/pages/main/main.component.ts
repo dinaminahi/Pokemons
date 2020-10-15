@@ -20,7 +20,7 @@ export class MainComponent implements OnInit, OnDestroy {
   constructor(private pockemonService: PockemonService) {}
 
   ngOnInit(): void {
-    this.getPockemons(`http://pokeapi.co/api/v2/pokemon/?limit=12/`);
+    this.getPockemons(`https://pokeapi.co/api/v2/pokemon/?limit=12/`);
   }
 
   ngOnDestroy(): void {
